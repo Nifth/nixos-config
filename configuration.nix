@@ -24,7 +24,7 @@
 
   boot.loader.efi.canTouchEfiVariables = false;
 
-  boot.loader.timeout = 10;
+  boot.loader.timeout = 4;
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -105,6 +105,15 @@
     packages = with pkgs; [
     #  thunderbird
     ];
+  };
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = [
+      pkgs.xdg-desktop-portal-hyprland
+      pkgs.xdg-desktop-portal-gtk
+    ];
+    config.common.default = "*"; # Force l'utilisation des portals dispos
   };
 
   programs.zsh.enable = true;
