@@ -146,6 +146,8 @@
     nautilus # on sait jamais
     sushi
     file-roller # voir les zip dans dezipp
+
+    pritunl-client
   ];
 
   # Pour avoir magento-cloud & opencode en cli

@@ -167,6 +167,7 @@
   #   enableSSHSupport = true;
   # };
   programs.hyprland.enable = true;
+  services.pritunl-client.enable = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
