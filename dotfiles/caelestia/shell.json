@@ -458,7 +458,7 @@
     }
   },
   "services": {
-    "weatherLocation": "",
+    "weatherLocation": "Lille",
     "useFahrenheit": false,
     "useFahrenheitPerformance": false,
     "useTwelveHourClock": false,

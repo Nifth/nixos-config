@@ -34,11 +34,6 @@
       target = "graphical-session.target";
       environment = [];
     };
-    #settings = {
-    #  general.idle = {
-    #    timeouts = [];
-    #  };
-    #};
     cli = {
       enable = true; # Also add caelestia-cli to path
       settings = {
