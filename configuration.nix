@@ -36,6 +36,8 @@
   # Dans configuration.nix (pour les services système)
   services.gvfs.enable = true; # Pour le montage des disques/clés USB
   services.tumbler.enable = true; # Pour les miniatures d'images
+  services.gnome.gnome-keyring.enable = true;
+  security.pam.services.login.enableGnomeKeyring = true;
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -131,6 +133,7 @@
     wget
     curl
     inputs.rose-pine-hyprcursor.packages.${stdenv.hostPlatform.system}.default
+    pritunl-client
   ];
 
   programs.nix-ld.enable = true;
@@ -152,6 +155,8 @@
   virtualisation.docker.enable = true;
 
   networking.extraHosts = ''
+    127.0.0.1   mister-auto.localhost.ie
+    127.0.0.1   mister-auto.localhost
     127.0.0.1   natif.localhost
     ::1         natif.localhost
   '';
@@ -167,7 +172,7 @@
   #   enableSSHSupport = true;
   # };
   programs.hyprland.enable = true;
-  services.pritunl-client.enable = true;
+  #services.pritunl-client.enable = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
